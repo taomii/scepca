@@ -1,0 +1,8 @@
+FROM smallstep/step-ca
+
+ENV DOCKER_STEPCA_INIT_NAME=Smallstep
+ENV DOCKER_STEPCA_INIT_DNS_NAMES=localhost
+ENV DOCKER_STEPCA_INIT_REMOTE_MANAGEMENT=true
+
+COPY . .
+RUN ./bootstrap.sh
